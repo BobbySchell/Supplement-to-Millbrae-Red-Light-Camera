@@ -80,7 +80,7 @@ dev.off()
 
 
 #################################
-# Creating SWITRS results
+# Creating SWITRS results after pre-processing
 # Source: https://alexgude.com/blog/switrs-sqlite-hosted-dataset/
 # 2004 to 2013
 #################################
