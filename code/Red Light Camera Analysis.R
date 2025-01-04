@@ -13,7 +13,11 @@ library(zoo)
 # Clear workspace
 rm(list = ls())
 
-# Import data
+# -------------
+# Import citation data
+# Source: http://www.highwayrobbery.net/redlightcamsdocsMillbraeMain.html
+# -------------
+
 citedata <- read_excel("citedata.xlsx", sheet = "Cleaned Cites Data")
 totdata <- read_excel("citedata.xlsx", sheet = "Cleaned Events Data")
 
