@@ -79,45 +79,6 @@ print(citesplot)
 dev.off()
 
 
-# Recreating figure with only the main line for total across cameras
-citedatalongtot <- citedatalongfilter %>%
-  filter(camera == "Total")
-
-plot <- ggplot(citedatalongtot, aes(x = Date, y = rollingcites)) +
-  geom_line(linewidth = 0.5)
-
-plot2 <- plot + 
-  theme(legend.position = "bottom",
-        legend.direction = "horizontal",
-        text = element_text(size = 11, color = "black"),
-        plot.title = element_text(size = 12, face = "bold"),
-        plot.caption = element_text(hjust = 0),
-        axis.text.x = element_text(color = "black"),
-        axis.text.y = element_text(color = "black"),
-        axis.line = element_line(color = "black", size = 0.25),
-        panel.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        strip.background = element_blank(),
-        axis.ticks.x = element_blank())
-
-plot3 <- plot2 +
-  ggtitle("\n Total Citations across Millbrae Redlight Cameras \n September 2006 - January 2014") +
-  ylab(expression(bold("Citations"))) +
-  xlab(expression(bold("Month"))) +
-  scale_y_continuous(expand = c(0, 0)) +
-  scale_x_date(date_breaks = "12 months", date_labels = "%b '%y", expand = c(0, 0.5))
-
-plot4 <- annotate_figure(plot3,
-                         bottom = text_grob("Source:", vjust = 0.5, color = "black", size = 10, just = "left", x = 0.05, face = "bold"))
-
-plot5 <- annotate_figure(plot4,
-                         bottom = text_grob("highwayrobbery.net", vjust = 0.5, color = "black", size = 10, just = "left", x = 0.05))
-
-simplecitesplot <- plot5
-print(simplecitesplot)
-
-
 #################################
 # Creating SWITRS results
 # Source: https://alexgude.com/blog/switrs-sqlite-hosted-dataset/
