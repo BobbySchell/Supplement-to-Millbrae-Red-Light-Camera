@@ -1,1 +1,1 @@
-The SWITRS data is too large to upload but can be downloaded from XXX. The switrs.sqlite name used in the program comes directly from this resource.
+The SWITRS data is too large to upload but can be downloaded from https://www.kaggle.com/datasets/alexgude/california-traffic-collision-data-from-switrs/versions/1. The switrs.sqlite name used in the program comes directly from this resource.
